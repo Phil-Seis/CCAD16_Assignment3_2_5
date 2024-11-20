@@ -21,7 +21,7 @@ namespace CCAD16_Assignment3_2_5
             Console.WriteLine($"{userChoice} is located at {index}");            
         }
 
-        //Create the find method
+        //Create the find method.
         static int Find(int[] array, int value)
         {
             for (int i = 0; i < array.Length; i++)
