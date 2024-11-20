@@ -7,6 +7,7 @@ namespace CCAD16_Assignment3_2_5
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Please input an array of numbers (space after each number), or type 'exit' to exit the program: ");
             string input = Console.ReadLine();
             int[] userArray = Array.ConvertAll(input.Split(' '), int.Parse);
@@ -17,19 +18,10 @@ namespace CCAD16_Assignment3_2_5
             int userChoice = Convert.ToInt32(Console.ReadLine());
 
             int index = Find(userArray, userChoice);
-
-            if (index != -1)
-            {
-                Console.WriteLine($"{userChoice} is located at index {index}");
-            }
-
-            else
-            {
-                Console.WriteLine($"{userChoice} is not found in the array. Try again");
-            }
+            Console.WriteLine($"{userChoice} is located at {index}");            
         }
 
-        //Create the find function
+        //Create the find method
         static int Find(int[] array, int value)
         {
             for (int i = 0; i < array.Length; i++)
